@@ -1,19 +1,26 @@
 package com.weiyung.publisher
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class MainViewModel : ViewModel(){
-    private val _contentLivaData = MutableLiveData<List<Content>>()
-    val contentLiveData: LiveData<List<Content>>
+    private var fireDB = FirebaseDatabase.getInstance()
+    private var dbRef: DatabaseReference = fireDB.getReference("data")
+    private var list: MutableList<Author> = mutableListOf()
+
+    private val _contentLivaData = MutableLiveData<Content>()
+    val contentLiveData: LiveData<Content>
         get() = _contentLivaData
+    private val _authorLivaData = MutableLiveData<Author>()
+    val authorLiveData: LiveData<Author>
+        get() = _authorLivaData
 
     val db = Firebase.firestore
 
@@ -35,8 +42,19 @@ class MainViewModel : ViewModel(){
             "category" to "Beauty"
         )
         document.set(data)
-
-
     }
+
+    val titleA = _contentLivaData.value?.title.toString()
+    val authorA = _authorLivaData.value?.name.toString()
+    val create_timeA = _contentLivaData.value?.created_time.toString()
+    val contentA = _contentLivaData.value?.content.toString()
+    val categoryA = _contentLivaData.value?.category.toString()
+
+//    fun show(){
+//        for (data in list){
+//            txt += "${data.name} ${data.age} ${data.tel}\n"
+//        }
+//        binding.text = txt
+//    }
 
 }

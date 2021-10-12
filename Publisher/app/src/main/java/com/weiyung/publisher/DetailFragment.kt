@@ -42,6 +42,8 @@ class DetailFragment : Fragment() {
             val createTime = DateTimeFormatter.ISO_INSTANT.format(Instant.now())
             val newID = db.collection("data").document().id
             val authorList = Author("","","")
+            val authorA = Author("123@123.com","123456","Wei")
+            val authorB = Author("","","")
             val contexxtt = Content(
                 authorList, editTitle,editContent,
                 FieldValue.serverTimestamp(),newID,editCategory)
@@ -50,6 +52,8 @@ class DetailFragment : Fragment() {
             db.collection("data").document(newID)
                 .set(contexxtt)
                 .addOnSuccessListener {
+//                    if (editTitle == "123"){
+//                    }
                     Log.d(TAG, "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
         }

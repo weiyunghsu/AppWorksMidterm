@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "352960819665",
+    "project_id": "publisher-99999",
+    "storage_bucket": "publisher-99999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352960819665:android:bb98a31c9c189d528f70f0",
+        "android_client_info": {
+          "package_name": "com.weiyung.publisher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352960819665-jie6870oi8q2pr6o5p0a4s6a0p8b19c1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAGnWHnn0Km0MP5XLjei69WZELnfufRR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352960819665-jie6870oi8q2pr6o5p0a4s6a0p8b19c1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

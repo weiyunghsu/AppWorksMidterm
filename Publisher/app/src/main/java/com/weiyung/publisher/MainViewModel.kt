@@ -1,10 +1,21 @@
 package com.weiyung.publisher
 
+import android.content.ContentValues.TAG
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class MainViewModel : ViewModel(){
+    private val _contentLivaData = MutableLiveData<List<Content>>()
+    val contentLiveData: LiveData<List<Content>>
+        get() = _contentLivaData
+
+    val db = Firebase.firestore
 
     fun addData() {
         val articles = FirebaseFirestore.getInstance()
@@ -24,6 +35,8 @@ class MainViewModel : ViewModel(){
             "category" to "Beauty"
         )
         document.set(data)
+
+
     }
 
 }

@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
+            name="content"
+            type="com.weiyung.publisher.Content" />
+        <variable
             name="viewModel"
             type="com.weiyung.publisher.MainViewModel" />
     </data>
@@ -37,7 +40,7 @@
                     android:hint="@string/input_title"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
-                    android:text="@string/input_title"
+                    android:text="@{content.title}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +56,7 @@
                     android:hint="@string/input_category"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
-                    android:text="@string/input_category"
+                    android:text="@{content.category}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_title" />
@@ -69,7 +72,7 @@
                     android:hint="@string/input_content"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
-                    android:text="@string/input_content"
+                    android:text="@{content.content}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_category" />

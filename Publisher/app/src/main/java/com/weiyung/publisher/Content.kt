@@ -1,10 +1,12 @@
 package com.weiyung.publisher
 
+import com.google.firebase.firestore.FieldValue
+
 data class Content(
-    val author: List<Author>,
+    val author: Author,
     val title: String,
     val content: String,
-    val createdTime: Long = System.currentTimeMillis(),
+    val created_time: FieldValue,
     val id: String,
     val category:String,
 )

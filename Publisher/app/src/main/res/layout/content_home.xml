@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
+            name="author"
+            type="com.weiyung.publisher.Author" />
+        <variable
             name="content"
             type="com.weiyung.publisher.Content" />
         <variable
@@ -22,10 +25,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/article_title"
+            android:text="@{content.title}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/article_title"/>
 
         <TextView
             android:id="@+id/author_name"
@@ -33,9 +37,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="@string/author_name"
+            android:text="@{author.name}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/article_title" />
+            app:layout_constraintTop_toBottomOf="@+id/article_title"
+            tools:text="@string/author_name"/>
 
         <TextView
             android:id="@+id/create_time"
@@ -43,9 +48,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="@string/create_time"
+            android:text="@{content.created_time.toString()}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/author_name" />
+            app:layout_constraintTop_toBottomOf="@+id/author_name"
+            tools:text="@string/create_time"/>
 
         <TextView
             android:id="@+id/article_content"
@@ -54,10 +60,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/article_content"
+            android:text="@{content.content}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/create_time" />
+            app:layout_constraintTop_toBottomOf="@+id/create_time"
+            tools:text="@string/article_content"/>
 
         <TextView
             android:id="@+id/category"
@@ -65,8 +72,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/category"
+            android:text="@{content.category}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/article_title" />
+            app:layout_constraintTop_toBottomOf="@+id/article_title"
+            tools:text="@string/category"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

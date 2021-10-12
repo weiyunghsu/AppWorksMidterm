@@ -51,13 +51,4 @@ class MainViewModel : ViewModel(){
         document.set(data)
     }
 
-
-
-//    fun show(){
-//        for (data in list){
-//            txt += "${data.name} ${data.age} ${data.tel}\n"
-//        }
-//        binding.text = txt
-//    }
-
 }

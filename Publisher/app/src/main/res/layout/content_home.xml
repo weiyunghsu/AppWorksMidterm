@@ -25,11 +25,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="@font/noto_sans"
             android:text="@{viewModel.titleA}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/article_title"/>
+            tools:text="@string/article_title" />
 
         <TextView
             android:id="@+id/author_name"
@@ -37,10 +41,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/noto_sans"
             android:text="@{viewModel.authorA}"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/article_title"
-            tools:text="@string/author_name"/>
+            tools:text="@string/author_name" />
 
         <TextView
             android:id="@+id/create_time"
@@ -48,10 +56,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/noto_sans"
             android:text="@{viewModel.create_timeA}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/author_name"
-            tools:text="@string/create_time"/>
+            tools:text="@string/create_time" />
 
         <TextView
             android:id="@+id/article_content"
@@ -60,11 +71,14 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="@font/noto_sans"
             android:text="@{viewModel.contentA}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/create_time"
-            tools:text="@string/article_content"/>
+            tools:text="@string/article_content" />
 
         <TextView
             android:id="@+id/category"
@@ -72,9 +86,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:background="#CCCCCC"
             android:text="@{viewModel.categoryA}"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/article_title"
-            tools:text="@string/category"/>
+            tools:text="@string/category" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

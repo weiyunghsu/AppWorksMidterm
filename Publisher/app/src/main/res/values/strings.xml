@@ -18,4 +18,5 @@
     <string name="input_content">input_content</string>
     <string name="input_title">input_title</string>
     <string name="submit_button">submit</string>
+    <string name="add">add</string>
 </resources>

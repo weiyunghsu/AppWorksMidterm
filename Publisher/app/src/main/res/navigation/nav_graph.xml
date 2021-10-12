@@ -25,4 +25,10 @@
             android:id="@+id/action_DetailFragment_to_HomeFragment"
             app:destination="@id/HomeFragment" />
     </fragment>
+    <action
+        android:id="@+id/action_global_DetailFragment"
+        app:destination="@id/DetailFragment" />
+    <action
+        android:id="@+id/action_global_HomeFragment"
+        app:destination="@id/HomeFragment" />
 </navigation>

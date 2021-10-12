@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Publisher</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Publisher</string>
+    <string name="detail_fragment_label">Publisher</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_home_fragment">Hello home fragment</string>
+    <string name="hello_detail_fragment">Hello detail fragment. Arg: %1$s</string>
+    <string name="article_title">article_title</string>
+    <string name="author_name">author_name</string>
+    <string name="create_time">create_time</string>
+    <string name="article_content">article_content</string>
+    <string name="category">category</string>
+    <string name="input_category">input_category</string>
+    <string name="input_content">input_content</string>
+    <string name="input_title">input_title</string>
+    <string name="submit_button">submit</string>
+</resources>

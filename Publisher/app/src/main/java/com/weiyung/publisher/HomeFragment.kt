@@ -89,6 +89,17 @@ class HomeFragment : Fragment() {
         }
         _binding!!.swipe.setOnRefreshListener(listener)
 
+        viewModel.contentLiveData.observe(viewLifecycleOwner,{
+            it?.let {
+                adapter.submitList(viewModel.listC)
+            }
+        })
+//        viewModel.authorLiveData.observe(viewLifecycleOwner,{
+//            it?.let {
+//                adapter.submitList(viewModel.listA)
+//            }
+//        })
+
         return binding.root
     }
 

@@ -13,7 +13,8 @@ import java.util.*
 class MainViewModel : ViewModel(){
     private var fireDB = FirebaseDatabase.getInstance()
     private var dbRef: DatabaseReference = fireDB.getReference("data")
-    private var list: MutableList<Author> = mutableListOf()
+    var listC: MutableList<Content> = mutableListOf()
+    var listA: MutableList<Author> = mutableListOf()
 
     private val _contentLivaData = MutableLiveData<Content>()
     val contentLiveData: LiveData<Content>
@@ -21,6 +22,12 @@ class MainViewModel : ViewModel(){
     private val _authorLivaData = MutableLiveData<Author>()
     val authorLiveData: LiveData<Author>
         get() = _authorLivaData
+
+    val titleA = _contentLivaData.value?.title.toString()
+    val authorA = _authorLivaData.value?.name.toString()
+    val create_timeA = _contentLivaData.value?.created_time.toString()
+    val contentA = _contentLivaData.value?.content.toString()
+    val categoryA = _contentLivaData.value?.category.toString()
 
     val db = Firebase.firestore
 
@@ -44,11 +51,7 @@ class MainViewModel : ViewModel(){
         document.set(data)
     }
 
-    val titleA = _contentLivaData.value?.title.toString()
-    val authorA = _authorLivaData.value?.name.toString()
-    val create_timeA = _contentLivaData.value?.created_time.toString()
-    val contentA = _contentLivaData.value?.content.toString()
-    val categoryA = _contentLivaData.value?.category.toString()
+
 
 //    fun show(){
 //        for (data in list){

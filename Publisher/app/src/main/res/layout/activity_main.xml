@@ -23,7 +23,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/purple_200"
+            android:background="@color/purple_500"
             app:popupTheme="@style/Theme.Publisher.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -37,10 +37,12 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="@color/purple_500"
         android:contentDescription="@string/add"
-        android:tint="@color/white"
-        app:srcCompat="@android:drawable/ic_input_add"
+        android:foregroundTint="@color/white"
+        app:tint="@color/white"
+        app:itemIconTint="@color/white"
+        app:srcCompat="@drawable/icons_24px_add02"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
